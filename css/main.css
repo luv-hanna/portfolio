@@ -1,0 +1,528 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+/* 프리텐다드 */
+
+@font-face {
+    font-family: 'Pretendard-Black';
+    src: url('../font/Pretendard/Pretendard-Black.woff') format('woff2'),
+        url('../font/Pretendard/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('../font/Pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-ExtraBold';
+    src: url('../font/Pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-ExtraLight';
+    src: url('../font/Pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Light';
+    src: url('../font/Pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('../font/Pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('../font/Pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('../font/Pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Thin';
+    src: url('../font/Pretendard/Pretendard-Thin.woff2') format('woff2'),
+        url('../font/Pretendard/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 딜라이트 */
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight/delight-extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Delight';
+    src: url('../font/delight-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    background-color: #111111;
+    height: 1300vh;
+}
+
+h1 {
+    margin: 0;
+}
+
+#scroll-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* ❤️header❤️ */
+
+.header {
+    width: 100%;
+    height: 100px;
+    color: #ffffff;
+    backdrop-filter: blur(2px);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+
+    transition: color 0.2s ease;
+}
+
+.header .inner {
+    max-width: 1760px;
+    width: calc(100% - 40px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.header .logo a {
+    font-size: 35px;
+    font-family: 'Pretendard-Black';
+    font-weight: 900;
+}
+
+.header .inner .nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 120px;
+    font-size: 20px;
+    font-family: 'Pretendard-Bold';
+    font-weight: bold;
+}
+
+.header .inner .nav .gnb li sup {
+    font-size: 15px;
+    font-family: 'Pretendard-Medium';
+    font-weight: 500;
+}
+
+/* 🧡main🧡 */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main .inner {
+    max-width: 1880px;
+    width: calc(100% - 44px);
+    height: 100%;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.main .inner .image {
+    position: absolute;
+    top: 120px;
+    left: -10px;
+    z-index: 20;
+    opacity: 0.9;
+    animation: flow 3s ease-in-out infinite;
+}
+
+@keyframes flow {
+    0% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+.main .inner .main-title .title-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    z-index: 10;
+}
+
+.main .inner .main-title .title-wrap::before {
+    display: block;
+    content: '';
+    background: url('../img/C_orange.svg') center center / 100% no-repeat;
+    width: 76px;
+    height: 76px;
+
+    position: absolute;
+    bottom: 85px;
+    left: 920px;
+}
+
+.main .inner .main-title .title-wrap::after {
+    display: block;
+    content: '';
+    width: 1760px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.main .inner .main-title h1 {
+    color: #ffffff;
+    font-size: 182px;
+    font-family: 'Delight';
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+
+.section-01 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.section-01 .inner {
+    max-width: 1880px;
+    width: calc(100% - 44px);
+    height: 100%;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.split {
+    text-align: center;
+    will-change: transform;
+}
+
+.split * {
+    will-change: transform;
+}
+
+/* 💛section_01💛 */
+
+.section-01 {
+    height: 100vh;
+    padding: 150px 0;
+}
+
+.section-01 .inner {
+    max-width: 1880px;
+    width: calc(100% - 44px);
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.section-01 .box {
+    width: 100vw;
+    height: 850px;
+    border-radius: 10px;
+    row-gap: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+}
+
+.section-01 .box .profile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.section-01 .box .profile .photo {
+    max-width: 450px;
+    max-height: 450px;
+    width: 90%;
+    height: 28vw;
+    overflow: hidden;
+    margin-right: 80px;
+
+}
+
+.section-01 .box .profile .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-01 .box .profile .myinfo {
+    width: 450px;
+    margin-top: 60px;
+}
+
+.section-01 .box .profile .myinfo ul {
+    font-size: 20px;
+}
+
+.section-01 .box .profile .myinfo ul li {
+    margin-bottom: 25px;
+}
+
+.section-01 .box .profile .myinfo ul strong {
+    margin-right: 40px;
+}
+
+.section-01 .box .line {
+    margin-left: 80px;
+}
+
+.section-01 .box .line .sub {
+    font-size: 35px;
+    line-height: 1.5;
+    letter-spacing: -3px;
+}
+
+.section-01 .box .line .sub strong {
+    font-family: 'Pretendard-ExtraBold';
+    font-weight: bold;
+    color: #F36039;
+    letter-spacing: -2px;
+}
+
+.section-01 .box .line .textbox {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+}
+
+.section-01 .box .line>div {
+    margin-bottom: 60px;
+}
+
+.section-01 .box .line h4 {
+    font-size: 18px;
+    font-family: 'Delight';
+    font-weight: 600;
+    margin-bottom: 28px;
+    letter-spacing: -3;
+}
+
+.section-01 .box .line p {
+    font-size: 18px;
+    font-family: 'Delight';
+    font-weight: 500;
+    margin-bottom: 3px;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    color: #9E9E9E;
+}
+
+.section-01 .box .line span {
+    font-size: 18px;
+    font-family: 'Pretendard-Light';
+    font-weight: 300;
+    letter-spacing: -1.5px;
+    line-height: 1.5;
+}
+
+.section-01 .box .line .text div {
+    font-size: 14px;
+    font-family: 'Pretendard-Regular';
+    font-weight: normal;
+    color: #9E9E9E;
+    margin-top: 3px;
+
+}
+
+.section-01 .margin .text {
+    margin-left: 20px;
+}
+
+.section-01 .line03 {
+    margin-top: 170px;
+}
+
+.section-01 .box .line .skills .icon-box {
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.section-01 .box .line .experience {
+    margin-top: 143px;
+}
+
+.section-01 .box .line .experience span {
+    margin-bottom: 26px;
+}
+
+
+/* 💚section-02💚 */
+
+.section-02 {
+    height: 100vh;
+    padding: 150px 0;
+}
+
+.section-02 .inner {
+    max-width: 1880px;
+    width: calc(100% - 44px);
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.section-02 .inner .image {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+}
+
+.section-02 .inner .image img {
+    width: 300px;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.section-02 .inner .container {}
+
+.section-02 .inner .wrapper {
+    margin-top: 60px;
+}
+
+.section-02 .inner .wrapper p {
+    font-size: 90px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.word {
+    color: #353535;
+}
